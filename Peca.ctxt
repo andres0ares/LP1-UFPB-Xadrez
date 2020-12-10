@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Peca
-comment0.text=\r\n\ Representa\ uma\ Pe\uFFFDa\ do\ jogo.\r\n\ Possui\ uma\ casa\ e\ um\ tipo\ associado.\r\n\ \r\n\ @author\ Alan\ Moraes\ &lt;alan@ci.ufpb.br&gt;\r\n\ @author\ Leonardo\ Villeth\ &lt;lvilleth@cc.ci.ufpb.br&gt;\r\n
+comment0.text=\r\n\ Representa\ uma\ Pe\uFFFDa\ do\ jogo.\r\n\ Possui\ uma\ casa\ e\ um\ tipo\ associado.\r\n\ \r\n\ @author\ Alan\ Moraes\ &lt;alan@ci.ufpb.br&gt;\r\n\ @author\ Leonardo\ Villeth\ &lt;lvilleth@cc.ci.ufpb.br&gt;\r\n\ @author\ Auren\u00EDvia\ Gomes\ da\ Costa\r\n
 comment1.params=casa\ tipo\ cor
-comment1.target=Peca(Casa,\ int,\ int)
+comment1.target=Peca(Casa,\ TipoDaPeca,\ CorDaPeca)
 comment2.params=destino\ tabuleiro
 comment2.target=java.lang.Boolean\ mover(Casa,\ Tabuleiro)
 comment2.text=\r\n\ Movimenta\ a\ peca\ para\ uma\ nova\ casa.\r\n\ @param\ destino\ nova\ casa\ que\ ira\ conter\ esta\ peca.\r\n
@@ -10,9 +10,9 @@ comment3.params=origem\ destino
 comment3.target=java.lang.Boolean\ verificaDestino(Peca,\ Casa)
 comment3.text=\r\n\ Verifica\ se\ a\ casa\ de\ destino\ n\u00E3o\ cont\u00E9m\ uma\ pe\u00E7a\ de\ sua\ cor.\r\n\ \r\n
 comment4.params=
-comment4.target=int\ getTipo()
-comment4.text=\r\n\ Valor\ \ \ \ Tipo\r\n\ \ \ 0\ \ \ \ \ \ Torre\r\n\ \ \ 1\ \ \ \ \ \ Cavalo\r\n\ \ \ 2\ \ \ \ \ \ Bispo\r\n\ \ \ 3\ \ \ \ \ \ Rainha\r\n\ \ \ 4\ \ \ \ \ \ Rei\r\n\ \ \ 5\ \ \ \ \ \ Peao\ \ \r\n\r\n\ @return\ o\ tipo\ da\ peca.\r\n
+comment4.target=TipoDaPeca\ getTipo()
+comment4.text=\r\n\ @return\ o\ tipo\ da\ peca.\r\n
 comment5.params=
-comment5.target=int\ getCor()
-comment5.text=\r\n\ Valor\ \ \ \ Cor\r\n\ \ \ 6\ \ \ \ \ \ Preto\r\n\ \ \ 0\ \ \ \ \ \ Branco\r\n\ \ \ \ \ \ \ \ \ \ \r\n\ @return\ o\ tipo\ da\ peca.\r\n
+comment5.target=CorDaPeca\ getCor()
+comment5.text=\r\n\ @return\ a\ cor\ da\ peca.\r\n
 numComments=6

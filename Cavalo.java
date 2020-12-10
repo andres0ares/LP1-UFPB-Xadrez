@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
  * Classe Cavalo, Define as regras e movimento para essa peca.
  *
  * @author (Andre Soares)
+ * @author Aurenivia Gomes da Costa
  * @version (001 08/11/2020)
  */
 public class Cavalo extends Peca
@@ -12,16 +13,17 @@ public class Cavalo extends Peca
     /** 
      * Constructor for objects of class Cavalo
      */
-    public Cavalo(Casa casa, int cor)
+    public Cavalo(Casa casa, CorDaPeca cor)
     {
         //public static final int CAVALO = 1;
-        super(casa, 1, cor);
+        super(casa, TipoDaPeca.CAVALO, cor);
         
     }
     
     /**
      * movimenta  a peca para o local de destino caso esteja correto.
      */
+    @Override
     public Boolean mover(Casa destino, Tabuleiro tabuleiro) {        
          
         // verifica pelo metodo podeMover(), se o destino esta na posicao permitida para o tipo de peca. (Andre)
@@ -47,7 +49,7 @@ public class Cavalo extends Peca
     /**
     * Verifica se o movimento e valido, retorna um boolean. 
     */
-    public Boolean podeMover(Casa casa, Casa destino) {
+    private Boolean podeMover(Casa casa, Casa destino) {
         
         // variaveis para simplificar o codigo (Andre)
         

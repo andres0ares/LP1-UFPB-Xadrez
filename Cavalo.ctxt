@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Cavalo
-comment0.text=\r\n\ Classe\ Cavalo,\ Define\ as\ regras\ e\ movimento\ para\ essa\ peca.\r\n\r\n\ @author\ (Andre\ Soares)\r\n\ @version\ (001\ 08/11/2020)\r\n
+comment0.text=\r\n\ Classe\ Cavalo,\ Define\ as\ regras\ e\ movimento\ para\ essa\ peca.\r\n\r\n\ @author\ (Andre\ Soares)\r\n\ @author\ Aurenivia\ Gomes\ da\ Costa\r\n\ @version\ (001\ 08/11/2020)\r\n
 comment1.params=casa\ cor
-comment1.target=Cavalo(Casa,\ int)
+comment1.target=Cavalo(Casa,\ CorDaPeca)
 comment1.text=\ \r\n\ Constructor\ for\ objects\ of\ class\ Cavalo\r\n
 comment2.params=destino\ tabuleiro
 comment2.target=java.lang.Boolean\ mover(Casa,\ Tabuleiro)

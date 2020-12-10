@@ -11,18 +11,19 @@ public class Torre extends Peca
 {
     
     /**
-     * Constructor for objects of class Cavalo
+     * Constructor for objects of class Torre
      */
-    public Torre(Casa casa, int cor)
+    public Torre(Casa casa, CorDaPeca cor)
     {
         // public static final int TORRE = 0;
-        super(casa, 0, cor);
+        super(casa, TipoDaPeca.TORRE, cor);
         
     }
     
     /**
      * movimenta  a peca para o local de destino caso esteja correto.
      */
+    @Override
     public Boolean mover(Casa destino, Tabuleiro tabuleiro) {
         
         if(this.verificaDestino(this, destino)) {
@@ -46,7 +47,7 @@ public class Torre extends Peca
     /**
     * Verifica se o movimento e valido, retorna um boolean. 
     */
-    public Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
+    private Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
         
             // variaveis para simplificar o codigo (Andre)
             

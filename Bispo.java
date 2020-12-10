@@ -9,10 +9,10 @@ public class Bispo extends Peca
     /**
      * Constructor for objects of class Cavalo
      */
-    public Bispo(Casa casa, int cor)
+    public Bispo(Casa casa, CorDaPeca cor)
     {
         //public static final int BISPO = 2;        
-        super(casa, 2, cor);
+        super(casa, TipoDaPeca.BISPO, cor);
         
     }
     
@@ -42,7 +42,7 @@ public class Bispo extends Peca
     /**
     * Verifica se o movimento e valido, retorna um boolean. 
     */
-    public Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
+    private Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
         
             // variaveis para simplificar o codigo (Laura)
             // tabuleiro.getCasa(casa.x + i, casa.y + i).getPeca() instanceof Peca
@@ -76,7 +76,7 @@ public class Bispo extends Peca
     /**
      * Verifica se ha uma outra peca na tragetoria de movimentacao da peca
      */
-    public Boolean pulouPeca(int diagonal, Casa casa, Casa destino, Tabuleiro tabuleiro ){
+    private Boolean pulouPeca(int diagonal, Casa casa, Casa destino, Tabuleiro tabuleiro ){
         
         int x = destino.x;
         int y = destino.y;

@@ -5,32 +5,20 @@
  * 
  * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
  * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
+ * @author Aurenívia Gomes da Costa
  */
-public class Peca {
-
-    public static final int TORRE = 0;
-    public static final int CAVALO = 1;
-    public static final int BISPO = 2;
-    public static final int RAINHA = 3;
-    public static final int REI = 4;
-    public static final int PEAO = 5;
-    
-    //com as cores diferentes ha 12 tipos de pecas, somando o tipo de peca a cor chegamos aos 12 tipos. (Andre)
-    
-    public static final int PRETO = 6;
-    public static final int BRANCO = 0;
-    
+abstract class Peca {
 
     protected Casa casa;
-    protected int tipo;   
-    protected int cor;         
+    protected TipoDaPeca tipo;   
+    protected CorDaPeca cor;         
     
-    public Peca(Casa casa, int tipo, int cor) {
+    public Peca(Casa casa, TipoDaPeca tipo, CorDaPeca cor) {
         
         this.casa = casa;
         this.tipo = tipo;
         this.cor = cor;
-                    
+        
         casa.colocarPeca(this);
     }
     
@@ -66,10 +54,10 @@ public class Peca {
     public Boolean verificaDestino(Peca origem, Casa destino ) {
 
         Peca destinoPeca = destino.getPeca();
-        int corOrigem = origem.getCor();
+        CorDaPeca corOrigem = origem.getCor();
 
         if(destinoPeca instanceof Peca){
-            int corDestino = destinoPeca.getCor();
+            CorDaPeca corDestino = destinoPeca.getCor();
             if(corOrigem != corDestino){
                 return true;
             }
@@ -79,29 +67,17 @@ public class Peca {
     }
     
     /**
-     * Valor    Tipo
-     *   0      Torre
-     *   1      Cavalo
-     *   2      Bispo
-     *   3      Rainha
-     *   4      Rei
-     *   5      Peao  
-     *
      * @return o tipo da peca.
      */
-    public int getTipo() {
+    public TipoDaPeca getTipo() {
         return tipo;
     }    
     
     
     /**
-     * Valor    Cor
-     *   6      Preto
-     *   0      Branco
-          
-     * @return o tipo da peca.
+     * @return a cor da peca.
      */
-    public int getCor() {
+    public CorDaPeca getCor() {
         return cor;
     }
 

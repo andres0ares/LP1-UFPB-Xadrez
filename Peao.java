@@ -11,12 +11,12 @@ public class Peao extends Peca
     /**
      * Construtor para objetos da classe Peao
      */
-    public Peao(Casa casa, int cor)
+    public Peao(Casa casa, CorDaPeca cor)
     {
         //public static final int PEAO = 5;
-        super(casa, 5, cor);
+        super(casa, TipoDaPeca.PEAO, cor);
     }
-
+    @Override
     public Boolean mover(Casa destino, Tabuleiro tabuleiro) {
         
         if(this.verificaDestino(this, destino)) {
@@ -37,7 +37,7 @@ public class Peao extends Peca
                 
     }
     
-    public Boolean podeMover(Casa casa, Casa destino) {
+    private Boolean podeMover(Casa casa, Casa destino) {
         
         // variaveis para simplificar o codigo (Andre)
         
@@ -46,7 +46,7 @@ public class Peao extends Peca
         
         //Verifica se o destino esta no mesmo eixo x e y. (Andre)
            
-           if(this.cor == 0){
+           if(this.getCor() == CorDaPeca.BRANCO){
                if(casa.x == x && (casa.y == y - 1 || casa.y == 1 && y == 3) && (destino.getPeca() == null)) {
                    return true;                   
                }
@@ -57,7 +57,7 @@ public class Peao extends Peca
                    return false;
                }     
            }
-           if(this.cor == 6){
+           if(this.getCor() == CorDaPeca.PRETO){
                if(casa.x == x && (casa.y == y + 1 || casa.y == 6 && y == 4) && (destino.getPeca() == null)){
                    return true;                   
                }

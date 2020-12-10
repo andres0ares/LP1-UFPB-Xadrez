@@ -10,16 +10,17 @@ public class Rainha extends Peca
     /**
      * Constructor for objects of class Rainha
      */
-    public Rainha(Casa casa, int cor)
+    public Rainha(Casa casa, CorDaPeca cor)
     {
         // public static final int RAINHA = 3;
-        super(casa, 3, cor);
+        super(casa, TipoDaPeca.RAINHA, cor);
         
     }
     
     /**
      * movimenta  a peca para o local de destino caso esteja correto.
      */
+    @Override
     public Boolean mover(Casa destino, Tabuleiro tabuleiro) {
         
         if(this.verificaDestino(this, destino)) {
@@ -43,7 +44,7 @@ public class Rainha extends Peca
     /**
     * Verifica se o movimento e valido, retorna um boolean. 
     */
-    public Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
+    private Boolean podeMover(Casa casa, Casa destino, Tabuleiro tabuleiro) {
         
             // variaveis para simplificar o codigo (Matheus)
             
@@ -77,7 +78,7 @@ public class Rainha extends Peca
     /**
      * Verifica se a rainha pulou outra peca e retorna o true caso seja verdadeiro (andre)
      */
-    public Boolean pulouPeca(String posicao, int eixo, Casa casa, Casa destino, Tabuleiro tabuleiro) {
+    private Boolean pulouPeca(String posicao, int eixo, Casa casa, Casa destino, Tabuleiro tabuleiro) {
          
             int x = destino.x;
             int y = destino.y;

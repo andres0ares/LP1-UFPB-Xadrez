@@ -50,7 +50,7 @@ public class JanelaPrincipal extends JFrame {
             Casa casaDestino = tabuleiro.getCasa(casaClicadaDestino.getPosicaoX(), casaClicadaDestino.getPosicaoY());
             
             if(casaDestino.getPeca() instanceof Peca) {
-                if(casaDestino.getPeca().getTipo() == 4) { possuiRei = true; } 
+                if(casaDestino.getPeca().getTipo() == TipoDaPeca.REI) { possuiRei = true; } 
             }
             
             if(casaClicadaDestino.getCorPeca() == -1 || casaClicadaDestino.getCor() != controle.getCor()){
